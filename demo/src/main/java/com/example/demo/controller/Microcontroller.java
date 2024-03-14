@@ -2,12 +2,12 @@ package com.example.demo.controller;
 
 import com.example.demo.service.CodyService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 
-@Controller
+@RestController
 @RequestMapping("fortune")
 @RequiredArgsConstructor
 public class Microcontroller {
@@ -15,8 +15,10 @@ public class Microcontroller {
     private final CodyService service;
 
     @GetMapping("/main")
-    public String Main(){
-        return "main";
+    public ModelAndView Main(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("main.html");
+        return modelAndView;
     }
 
     @GetMapping("/test")
