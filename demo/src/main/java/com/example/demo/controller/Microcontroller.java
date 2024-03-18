@@ -11,7 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("fortune")
 @RequiredArgsConstructor
 public class Microcontroller {
-
     private final CodyService service;
 
     @GetMapping(value = "/main")
@@ -22,15 +21,19 @@ public class Microcontroller {
     }
 
     @GetMapping(value = "/test")
-    public String Test(Model model){
-        model.addAttribute("cnt",service.boardCount());
-        model.addAttribute("test",service.boardList());
-        return "test";
+    public ModelAndView Test(Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("test.html");
+        model.addAttribute("cnt", service.boardCount());
+        model.addAttribute("test", service.boardList());
+        return modelAndView;
     }
 
     @GetMapping ("/login")
-    public String LoginForm(){
-        return "login";
+    public ModelAndView LoginForm(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("login.html");
+        return modelAndView;
     }
 
     @PostMapping("/login")
