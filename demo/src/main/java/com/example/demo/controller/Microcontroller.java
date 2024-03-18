@@ -14,14 +14,14 @@ public class Microcontroller {
 
     private final CodyService service;
 
-    @GetMapping("/main")
+    @GetMapping(value = "/main")
     public ModelAndView Main(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("main.html");
         return modelAndView;
     }
 
-    @GetMapping("/test")
+    @GetMapping(value = "/test")
     public String Test(Model model){
         model.addAttribute("cnt",service.boardCount());
         model.addAttribute("test",service.boardList());
