@@ -13,7 +13,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.hamcrest.Matcher.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -34,6 +34,7 @@ public class testcontrollerTest {
                 .andExpect(content().string(hello));
     }
 
+
     @Test
     public void hellodto() throws Exception{
         String name = "hello";
@@ -41,7 +42,7 @@ public class testcontrollerTest {
 
         mockMvc.perform(get("/hello/dto").param("name",name).param("amount", String.valueOf(amount)))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name", is(name)))
-                .andExpect(jsonPath("$.amount",is(amount)));
+                .andExpect(jsonPath("$.name").value("hello"))
+                .andExpect(jsonPath("$.amount").value(1000));
     }
 }
