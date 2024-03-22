@@ -15,7 +15,6 @@ class ReponseDtoTest {
     void test(){
         assertThat(dto.getName()).isEqualTo(name);
         assertThat(dto.getAmount()).isEqualTo(amount);
-
     }
 
     @Test
