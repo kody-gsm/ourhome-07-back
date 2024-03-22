@@ -1,9 +1,8 @@
 package com.example.dto;
 
-import org.assertj.core.api.Assertions;
+import com.example.demo.book.domain.dto.ReponseDto;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class ReponseDtoTest {
     String name ="test";

@@ -1,6 +1,6 @@
-package com.example.demo.mapper;
+package com.example.demo.cody.domain.mapper;
 
-import com.example.demo.domain.Cody;
+import com.example.demo.cody.domain.DTO.Cody;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;

@@ -1,6 +1,6 @@
-package com.example.demo.controller;
+package com.example.demo.cody.controller;
 
-import com.example.demo.service.CodyService;
+import com.example.demo.cody.service.CodyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

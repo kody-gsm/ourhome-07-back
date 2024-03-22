@@ -1,7 +1,7 @@
-package com.example.demo.service;
+package com.example.demo.cody.service;
 
-import com.example.demo.domain.Cody;
-import com.example.demo.mapper.Codymapper;
+import com.example.demo.cody.domain.DTO.Cody;
+import com.example.demo.cody.domain.mapper.Codymapper;
 import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
