@@ -16,14 +16,14 @@ public class Microcontroller {
     @GetMapping(value = "/main")
     public ModelAndView Main(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("main.html");
+        modelAndView.setViewName("kody/main.html");
         return modelAndView;
     }
 
     @GetMapping(value = "/test")
     public ModelAndView Test(Model model) {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("test.html");
+        modelAndView.setViewName("kody/test.html");
         model.addAttribute("cnt", service.boardCount());
         model.addAttribute("test", service.boardList());
         return modelAndView;
@@ -32,7 +32,7 @@ public class Microcontroller {
     @GetMapping ("/login")
     public ModelAndView LoginForm(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("login.html");
+        modelAndView.setViewName("kody/login.html");
         return modelAndView;
     }
 
