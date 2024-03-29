@@ -13,7 +13,6 @@ import java.util.Map;
 
 
 @RestController
-@RequestMapping("fortune")
 @RequiredArgsConstructor
 public class Microcontroller {
     private final CodyService service;
@@ -46,7 +45,7 @@ public class Microcontroller {
         return "redirect:/fortune/main";
     }
 
-    @PostMapping("/testData")
+/*    @PostMapping("/testData")
     public Map<Integer, String> testData(@RequestBody Map<String, List<String>> str){
         System.out.println(str);
         Map<Integer, String> data = new HashMap<>();
@@ -60,5 +59,5 @@ public class Microcontroller {
 //            i++;
 //        }
         return data;
-    }
+    }*/
 }

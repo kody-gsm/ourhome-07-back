@@ -23,7 +23,9 @@ function QuestionInput({ isclicked, url }) {
   const sendQuestion = async () => {
     isclicked(true);
     await axios
-      .post(`${url}/kody/create`, { title: question })
+      .post(`/kody/create`, {
+        title: question
+      })
       .then(function (e) {
         settingsuccess(e);
       })
@@ -49,12 +51,12 @@ function QuestionInput({ isclicked, url }) {
     let question = [];
     let returns = [];
     await axios
-        .get(`${url}/kody/answer`)
+        .get(`/kody/answer`)
         .then((e) => {
       question = e.data;
     });
     await axios
-      .post(`${url}/kody/answer`)
+      .post(`/kody/answer`)
       .then((e) => {
         answer = e.data;
       })
