@@ -9,7 +9,7 @@ import Welcome from "./pages/Welcome";
 
 export default function App() {
   axios.defaults.withCredentials = true;
-  const url = "http://localhost:3000/qna-questions";
+  const url = "";
   return <div className="App">
     <BrowserRouter>
       <Routes>

@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import kodylogo from "../imgs/kody.png";
 
-export default function Qnaa({ url }) {
+export default function Qnaa() {
+  const url = process.env.REACT_APP_BASE_URL
   axios.defaults.withCredentials = true;
   const [a, setA] = useState([]);
   const [alen, setAlen] = useState([]);

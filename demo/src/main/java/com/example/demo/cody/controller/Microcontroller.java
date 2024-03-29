@@ -47,18 +47,18 @@ public class Microcontroller {
     }
 
     @PostMapping("/testData")
-    public Map<Integer, String> testData(@RequestBody List<String> params){
+    public Map<Integer, String> testData(@RequestBody Map<String, List<String>> str){
+        System.out.println(str);
         Map<Integer, String> data = new HashMap<>();
         data.put(1,"사과");
         data.put(2,"배");
         data.put(3,"자두");
 
         int i = 4;
-        for(String param : params){
-            data.put(i,param);
-            i++;
-        }
-
+//        for(String param : str){
+//            data.put(i,param);
+//            i++;
+//        }
         return data;
     }
 }
