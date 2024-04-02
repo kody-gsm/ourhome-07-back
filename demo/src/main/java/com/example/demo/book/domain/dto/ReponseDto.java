@@ -1,11 +1,9 @@
 package com.example.demo.book.domain.dto;
 
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.Data;
 
-@Getter
-@RequiredArgsConstructor
+@Data
 public class ReponseDto {
     private final String name;
     private final int amount;

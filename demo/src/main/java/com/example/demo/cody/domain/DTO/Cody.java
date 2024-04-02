@@ -6,7 +6,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Cody{
-    //DB 구조
+    //DB의 속성들
     private int boardID;
     private String title;
     private String content;

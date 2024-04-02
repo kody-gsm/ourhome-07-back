@@ -16,8 +16,8 @@ public class Services {
         mappers.setQ(Q);
     }
 
-    public void seta(String A){
-        mappers.setA(A);
+    public void seta(String A, String ID){
+        mappers.setA(A, ID);
     }
 
     public String getq(){

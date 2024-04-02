@@ -5,17 +5,21 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/kody")
+@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 public class Welcontroller {
     private final Services service;
 
+
     @PostMapping("/create")
-    public String test(@RequestBody String q){
-        service.setq(q);
-        return q;
+    public String test(@RequestBody Map<String, String> q){
+        System.out.println(q.get("question"));
+        service.setq(q.get("question"));
+        return "Created";
     }
 
     @GetMapping("/answer")
@@ -26,11 +30,10 @@ public class Welcontroller {
     }
 
     @PostMapping("/answer")
-    public String test1(@RequestBody String a){
+    public String test1(@RequestBody String a, String ID){
         service.getq();
-        service.seta(a);
+        service.seta(a, ID);
         service.geta();
         return a;
     }
-
 }
