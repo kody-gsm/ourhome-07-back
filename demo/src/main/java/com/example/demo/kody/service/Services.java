@@ -1,6 +1,7 @@
 package com.example.demo.kody.service;
 
 
+import com.example.demo.kody.domain.DTO.Datas;
 import com.example.demo.kody.domain.mapper.Mappers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,12 +13,12 @@ import org.springframework.transaction.annotation.Transactional;
 public class Services {
     private final Mappers mappers;
 
-    public void setq(String Q){
-        mappers.setQ(Q);
+    public void setq(String datas){
+        mappers.setQ(datas);
     }
 
     public void seta(String A, String ID){
-        mappers.setA(A, ID);
+        Datas datas = new Datas();
     }
 
     public String getq(){
