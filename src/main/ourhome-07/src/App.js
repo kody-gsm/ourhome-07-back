@@ -15,7 +15,7 @@ export default function App() {
         <Route path="*" element={<Navigate to={'/'} replace />} />
         <Route path="/" element={<Welcome />} />
         <Route path="/qna-questions" element={<Qnaq url={url} />} />
-        <Route path="/qna-answera" element={<Qnaa url={url} />} />
+        <Route path="/qna-answers" element={<Qnaa url={url} />} />
       </Routes>
     </BrowserRouter>
   </div>;
