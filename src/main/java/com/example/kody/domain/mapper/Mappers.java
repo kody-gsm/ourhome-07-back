@@ -14,4 +14,7 @@ public interface Mappers {
 
     @Select("SELECT A FROM welcome WHERE ID = (#{ID})")
     String getA(double ID);
+
+    @Select("SELECT count(ID) FROM welcome")
+    double getMAX();
 }
