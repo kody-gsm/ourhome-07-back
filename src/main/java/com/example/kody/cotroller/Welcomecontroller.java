@@ -21,7 +21,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class Welcomecontroller {
     private final Service service;
-    @GetMapping("/Quescion")
+    @GetMapping("/Question")
     public List<Map<Double,String>> Max(){
         double selecter = service.getMax();
         System.out.println(selecter);
